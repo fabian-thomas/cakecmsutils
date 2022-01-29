@@ -2,22 +2,19 @@
 
 Python scripts to interact with the [CakeCMS API](https://cms.cispa.saarland/system/help/api).
 
-## Requirements
-
-
 ## Installation of the python module
 
-## Prerequisites
+### Prerequisites
 
 The [cakecms module](https://gitea.mk-bauer.de/CakeCMS/CakeCMS-Python-API) has to be installed first.
 
-## Installation
+### Installation
 
 ```bash
 make install
 ```
 
-## Potential Issues
+### Potential Issues
 
 You may need to adjust the Makefile to match your python version (also for the official `cakecms` module).
 For windows systems one may need to adjust the Makefile as well. Please post a PR if someone knows how to set this up correctly.
