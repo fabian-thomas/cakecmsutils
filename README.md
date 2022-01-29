@@ -1,5 +1,3 @@
-# cakecmsutils
-
 Python scripts to interact with the [CakeCMS API](https://cms.cispa.saarland/system/help/api).
 
 ## Installation of the python module
@@ -19,7 +17,7 @@ make install
 You may need to adjust the Makefile to match your python version (also for the official `cakecms` module).
 For windows systems one may need to adjust the Makefile as well. Please post a PR if someone knows how to set this up correctly.
 
-## Example scripts:
+## Example scripts
 
 For obtaining the right values for `HOST`, `TOKEN` and `COURSE` refer to [CakeCMS API](https://cms.cispa.saarland/system/help/api).
 
