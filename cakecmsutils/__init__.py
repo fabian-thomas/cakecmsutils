@@ -1,1 +1,1 @@
-from .cakecmsutils import ExtendedCakeCMS
+from .extendedcakecms import ExtendedCakeCMS
