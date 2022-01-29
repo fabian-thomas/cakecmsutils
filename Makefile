@@ -1,2 +1,2 @@
 install:
-	cp -r mycakecms ~/.local/lib/python3.10/site-packages
+	cp -r cakecmsutils "$(HOME)/.local/lib/python3.10/site-packages"

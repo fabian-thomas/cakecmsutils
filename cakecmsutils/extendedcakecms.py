@@ -12,7 +12,7 @@ def user_confirm(question):
     else:
         return False
 
-class MyCakeCMS(CakeCMS):
+class ExtendedCakeCMS(CakeCMS):
     def __init__(self, url, token=None, course='system'):
         if os.path.exists(CACHE_FILE):
             with open(CACHE_FILE, 'rb') as fd:

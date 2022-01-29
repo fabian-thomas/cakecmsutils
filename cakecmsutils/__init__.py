@@ -1,0 +1,1 @@
+from .cakecmsutils import ExtendedCakeCMS
