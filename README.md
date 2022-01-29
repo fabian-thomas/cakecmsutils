@@ -9,7 +9,7 @@ make install
 ```
 
 You may need to adjust the Makefile to match your python version.
-For windows systems one may need to adjust the makefile as well. Please post a PR if someone knows how to set this up correctly.
+For windows systems one may need to adjust the Makefile as well. Please post a PR if someone knows how to set this up correctly.
 
 ## Example scripts:
 
