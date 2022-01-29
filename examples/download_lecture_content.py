@@ -2,9 +2,10 @@
 from cakecmsutils import ExtendedCakeCMS
 
 HOST = 'https://cms.cispa.saarland'
-TOKEN = 'xxxxxxxxxxxxxxxxxxxxxxxx' # TODO: replace with your token
+TOKEN = 'xxxxxxxxxxxxxxxxxxxxxxxx'
+COURSE = 'ver2122'
 
-cms = ExtendedCakeCMS(HOST, token=TOKEN, course='ver2122')
+cms = ExtendedCakeCMS(HOST, token=TOKEN, course=COURSE)
 
 # Download files in category 'Lecture Slides' to directory slides and
 # filter out slides that have 'preliminary' in their filename.
