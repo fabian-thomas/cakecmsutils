@@ -21,7 +21,7 @@ For windows systems one may need to adjust the Makefile as well. Please post a P
 
 For obtaining the right values for `HOST`, `TOKEN` and `COURSE` refer to [CakeCMS API](https://cms.cispa.saarland/system/help/api).
 
-### Download course materials (examples/download_course_content.py)
+### Download course materials (examples/download_course_materials.py)
 
 This script may be used to download course materials by category. The example script also shows how a negative filter may be used to skip some of the files. Note that `ExtendedCakeCMS` writes data to a hidden cache file in your PWD. This cache file makes sure that no files need to be redownloaded.
 
