@@ -21,6 +21,7 @@ pip install build
 
 Then (from the root of the repo):
 ```bash
+python -m build
 pip install dist/*.whl
 ```
 
