@@ -38,6 +38,10 @@ class ExtendedCakeCMS(CakeCMS):
         for file in category['MaterialFile']:
             new_revision = False
 
+            if file['link'] != None:
+                # file is only link
+                continue
+
             if filter_fun != None and filter_fun(file['name']):
                 # file rejected by filter
                 continue
