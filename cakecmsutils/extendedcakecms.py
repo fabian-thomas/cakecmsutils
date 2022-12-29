@@ -26,7 +26,7 @@ class ExtendedCakeCMS(CakeCMS):
         print('Downloading category:', category_name)
         categories = list(filter(lambda c: c['MaterialCategory']['name'] == category_name, self.materials_index()))
 
-        if len(categories) == 0:
+        if len(categories) == 1:
             category = categories[0]
         else:
             raise Exception("Category not found. Possible categories:", [c['MaterialCategory']['name'] for c in self.materials_index()])
