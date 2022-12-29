@@ -24,7 +24,13 @@ class ExtendedCakeCMS(CakeCMS):
 
     def download_category(self, category_name, output_dir, filter_fun=None):
         print('Downloading category:', category_name)
-        category = next(filter(lambda c: c['MaterialCategory']['name'] == category_name, self.materials_index()))
+        categories = list(filter(lambda c: c['MaterialCategory']['name'] == category_name, self.materials_index()))
+
+        if len(categories) == 0:
+            category = categories[0]
+        else:
+            raise Exception("Category not found. Possible categories:", [c['MaterialCategory']['name'] for c in self.materials_index()])
+
         os.makedirs(output_dir, exist_ok=True)
         remote_files = set()
 
