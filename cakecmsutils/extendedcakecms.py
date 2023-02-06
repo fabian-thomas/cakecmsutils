@@ -2,6 +2,7 @@ from cakecms import CakeCMS
 import json
 import os
 import pickle
+import re
 
 CACHE_FILE = '.cakecmscache'
 
@@ -11,6 +12,10 @@ def user_confirm(question):
         return True
     else:
         return False
+
+def pad_number(match, pad):
+    num = int(match.group(1))
+    return f'{num:0{pad}}'
 
 class ExtendedCakeCMS(CakeCMS):
     def __init__(self, url, token=None, course='system'):
@@ -22,7 +27,7 @@ class ExtendedCakeCMS(CakeCMS):
             self.cache['files'] = {}
         super().__init__(url, token, course)
 
-    def download_category(self, category_name, output_dir, filter_fun=None):
+    def download_category(self, category_name, output_dir, filter_fun=None, pad_digits=0):
         print('Downloading category:', category_name)
         categories = list(filter(lambda c: c['MaterialCategory']['name'] == category_name, self.materials_index()))
 
@@ -57,7 +62,11 @@ class ExtendedCakeCMS(CakeCMS):
 
             # download file
             response = self.material_download(file['id'])
+
             filename = response[0]
+            # pad filename numbers
+            filename=re.sub(r"(\d+)", lambda m: pad_number(m, pad_digits), filename)
+
             filepath = os.path.join(output_dir, filename)
             with open(filepath, 'wb') as fd:
                 fd.write(response[1])
